@@ -1,50 +1,194 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Scene It</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 header text-center">
-          <h2 class="display-2">Scene It</h2>
-          <p>Search for movies you want to watch.</p>
-          <p>Save them to your list</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <form id="search-form">
-            <div class="input-group input-group-lg">
-              <input
-                class="form-control search-bar"
-                placeholder="Search for a movie..."
-              />
-              <button class="btn btn-primary input-group-btn" type="submit">
-                Search
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row mt-5" id="results">
-        <!-- MOVIES SHOW UP HERE! -->
+
+<head>
+  <title>Scene It</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 header text-center">
+        <h2 class="display-2">Scene It</h2>
+        <p>Search for movies you want to watch.</p>
+        <p>Save them to your list</p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+        <form id="search-form">
+          <div class="input-group input-group-lg">
+            <input class="form-control search-bar" placeholder="Search for a movie..." />
+            <button class="btn btn-primary input-group-btn" type="submit">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-5" id="results">
+      <!-- MOVIES SHOW UP HERE! -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script src="data.js"></script>
-    <script src="index.js"></script>
-  </body>
+<!-- movie 1 -->
+      <div class="movie col-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./movie-posters/the-courier.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Courier</h5>
+            <h6 class="card-subtitle mb-2 text-muted float-end movie-1">2020</h6>
+            <p class="card-text">
+              <p>
+                <!-- flex start at the beginning or maybe it's float-end... -->
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-1" aria-expanded="false" aria-controls="collapseExample">
+                  Summary
+                </button>
+              </p>
+              <div class="collapse" id="collapseMV-1" >
+                <div class="card card-body">
+                  The true story of a British businessman unwittingly recruited into one of the greatest international conflicts in history. Forming an unlikely partnership with a Soviet officer hoping to prevent a nuclear confrontation, the two men work together to provide the crucial intelligence used to defuse the Cuban Missile Crisis.
+                </div>
+              </div>
+            </p>
+            <a href="#" class="btn btn-primary">Add</a>
+          </div>
+        </div>
+      </div>
+
+<!-- movie 2 -->
+      <div class="movie col-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./movie-posters/once poster.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Once</h5>
+            <h6 class="card-subtitle mb-2 text-muted float-end movie-2">2007</h6>
+            <p class="card-text">
+              <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-2" aria-expanded="false" aria-controls="collapseExample">
+                  Summary
+                </button>
+              </p>
+              <div class="collapse" id="collapseMV-2">
+                <div class="card card-body">
+                  A vacuum repairman (Glen Hansard) moonlights as a street musician and hopes for his big break. One day a Czech immigrant (Marketa Irglova), who earns a living selling flowers, approaches him with the news that she is also an aspiring singer-songwriter. The pair decide to collaborate, and the songs that they compose reflect the story of their blossoming love.
+                </div>
+              </div>
+            </p>
+            <a href="#" class="btn btn-primary">Add</a>
+          </div>
+        </div>
+      </div>
+
+<!-- movie 3 -->
+<div class="movie col-4">
+  <div class="card" style="width: 18rem;">
+    <img src="./movie-posters/F&L LV.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Fear and Loathing in Las Vegas</h5>
+      <h6 class="card-subtitle mb-2 text-muted float-end movie-3">1998</h6>
+      <p class="card-text">
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-3" aria-expanded="false" aria-controls="collapseExample">
+            Summary
+          </button>
+        </p>
+        <div class="collapse" id="collapseMV-3">
+          <div class="card card-body">
+            Raoul Duke (Johnny Depp) and his attorney Dr. Gonzo (Benicio Del Toro) drive a red convertible across the Mojave desert to Las Vegas with a suitcase full of drugs to cover a motorcycle race. As their consumption of drugs increases at an alarming rate, the stoned duo trash their hotel room and fear legal repercussions. Duke begins to drive back to L.A., but after an odd run-in with a cop (Gary Busey), he returns to Sin City and continues his wild drug binge.
+          </div>
+        </div>
+      </p>
+      <a href="#" class="btn btn-primary">Add</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- movie 4 -->
+<div class="movie col-4">
+  <div class="card" style="width: 18rem;">
+    <img src="./movie-posters/dallas-buyers-club.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Dallas Buyers Club</h5>
+      <h6 class="card-subtitle mb-2 text-muted float-end movie-4">2013</h6>
+      <p class="card-text">
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-4" aria-expanded="false" aria-controls="collapseExample">
+            Summary
+          </button>
+        </p>
+        <div class="collapse" id="collapseMV-4">
+          <div class="card card-body">
+            In mid-1980s Texas, electrician Ron Woodroof (Matthew McConaughey) is stunned to learn that he has AIDS. Though told that he has just 30 days left to live, Woodroof refuses to give in to despair. He seeks out alternative therapies and smuggles unapproved drugs into the U.S. from wherever he can find them. Woodroof joins forces with a fellow AIDS patient (Jared Leto) and begins selling the treatments to the growing number of people who can't wait for the medical establishment to save them.
+          </div>
+        </div>
+      </p>
+      <a href="#" class="btn btn-primary">Add</a>
+    </div>
+  </div>
+</div>
+
+<!-- movie 5 -->
+<div class="movie col-4">
+  <div class="card" style="width: 18rem;">
+    <img src="./movie-posters/skyfall-poster.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Skyfall</h5>
+      <h6 class="card-subtitle mb-2 text-muted float-end movie-5">2012</h6>
+      <p class="card-text">
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-5" aria-expanded="false" aria-controls="collapseExample">
+            Summary
+          </button>
+        </p>
+        <div class="collapse" id="collapseMV-5">
+          <div class="card card-body">
+            When James Bond's (Daniel Craig) latest assignment goes terribly wrong, it leads to a calamitous turn of events: Undercover agents around the world are exposed, and MI6 is attacked, forcing M (Judi Dench) to relocate the agency. With MI6 now compromised inside and out, M turns to the one man she can trust: Bond. Aided only by a field agent (Naomie Harris), Bond takes to the shadows and follows a trail to Silva (Javier Bardem), a man from M's past who wants to settle an old score.
+          </div>
+        </div>
+      </p>
+      <a href="#" class="btn btn-primary">Add</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- movie 6 -->
+<div class="movie col-4">
+  <div class="card" style="width: 18rem;">
+    <img src="./movie-posters/john-wick.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">John Wick</h5>
+      <h6 class="card-subtitle mb-2 text-muted float-end movie-6">2014</h6>
+      <p class="card-text">
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-6" aria-expanded="false" aria-controls="collapseExample">
+            Summary
+          </button>
+        </p>
+        <div class="collapse" id="collapseMV-6">
+          <div class="card card-body">
+            Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.
+          </div>
+        </div>
+      </p>
+      <a href="#" class="btn btn-primary">Add</a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
+

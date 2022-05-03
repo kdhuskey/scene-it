@@ -9,3 +9,33 @@ body {
 .header p {
 	color: #50524F;
 }
+
+.movie-1 {
+	margin-top: -30px;
+	font-weight: bold;
+}
+
+.movie-2 {
+	margin-top: -30px;
+	font-weight: bold;
+}
+
+.movie-3 {
+	padding-left: 10px;
+	margin-top: -30px;
+	font-weight: bold;
+}
+.movie-4 {
+	margin-top: -30px;
+	font-weight: bold;
+}
+.movie-5 {
+	margin-top: -30px;
+	font-weight: bold;
+}
+.movie-6 {
+	margin-top: -30px;
+	font-weight: bold;
+}
+
+
