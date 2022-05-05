@@ -37,5 +37,11 @@ body {
 	margin-top: -30px;
 	font-weight: bold;
 }
-
-
+.sum{
+	display: flex;
+    flex-flow: column;
+}
+.save{
+	display: flex;
+    flex-flow: column;
+}
