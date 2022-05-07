@@ -11,32 +11,10 @@ body {
 }
 
 .movie-1 {
-	margin-top: -30px;
+	/* margin-top: -30px; */
 	font-weight: bold;
 }
 
-.movie-2 {
-	margin-top: -30px;
-	font-weight: bold;
-}
-
-.movie-3 {
-	padding-left: 10px;
-	margin-top: -30px;
-	font-weight: bold;
-}
-.movie-4 {
-	margin-top: -30px;
-	font-weight: bold;
-}
-.movie-5 {
-	margin-top: -30px;
-	font-weight: bold;
-}
-.movie-6 {
-	margin-top: -30px;
-	font-weight: bold;
-}
 .sum{
 	display: flex;
     flex-flow: column;
@@ -44,4 +22,24 @@ body {
 .save{
 	display: flex;
     flex-flow: column;
+}
+.home-btn{
+	display: inline-flex;
+	flex-flow: column;
+	font-size: 30px;
+}
+.spz{
+	display: flex;
+	justify-content: space-evenly;
+}
+.cd-algn{
+	display: flex;
+	justify-content: space-between;
+}
+.card-subtitle{
+	display: flex;
+	flex-flow: column-reverse;
+}
+.card-title{
+	display: flex;
 }
