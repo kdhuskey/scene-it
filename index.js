@@ -2,7 +2,6 @@ function renderMovies(movies) {
     Promise.all(movies.map(movie => {
         return fetch(`http://www.omdbapi.com/?apikey=59354c85&i=${movie.imdbID}`)
             .then(res => res.json())
-
     })
     )
         .then(detailedMovies => {
@@ -26,7 +25,6 @@ function renderMovies(movies) {
                 </div>
                 <p class="card-text">
                 <p class="sum">
-                    <!-- flex start at the beginning or maybe it's float-end... -->
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-${currentMovie.imdbID}" aria-expanded="false" aria-controls="collapseExample">
                     Summary
                     </button>
@@ -56,8 +54,6 @@ function renderMovies(movies) {
 const myForm = document.querySelector('#search-form')
 myForm.addEventListener('submit', function (e) {
     e.preventDefault()
-
-
     const searchString = document.querySelector('.search-bar').value
     const urlEncodedSearchString = encodeURIComponent(searchString)
     fetch(`http://www.omdbapi.com/?apikey=59354c85&s=${urlEncodedSearchString}`)
@@ -67,27 +63,21 @@ myForm.addEventListener('submit', function (e) {
         .then(function (data) {
             renderMovies(data.Search)
             movieData = data.Search
-
-
         })
-    // might want to not have the reset could be the issue of not defined
     myForm.reset()
 
 })
 
 
 const addButton = document.querySelector('.add-button')
-
 document.addEventListener('click', function (event) {
     if (event.target.contains(addButton)) {
         const movieID = event.target.dataset.imdbid
-        // console.log(movieID)
 
     }
 })
 function saveToWatchlist(movieID) {
     console.log(movieID)
-    // const movie = movieID
     const movie = movieData.find(function (currentMovie) {
         return currentMovie.imdbID == movieID
     })

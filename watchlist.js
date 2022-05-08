@@ -2,12 +2,11 @@ function renderMovies(movies) {
 
 
     const movieHtmlArray = movies.map(function (currentMovie) {
-// line 9 add spz class, if i use col-4 class in css it affects the summary button in the search results
 
         return `
         
         <div class="movie col-4 spz">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;"> 
         <div>
         <a href="https://www.imdb.com/title/${currentMovie.imdbID}/">
         <img src="${currentMovie.Poster}" class="card-img-top" alt="..." >
@@ -21,15 +20,11 @@ function renderMovies(movies) {
             <p class="card-text">
             <p class="sum">
                 <!-- flex start at the beginning or maybe it's float-end... -->
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-${currentMovie.imdbID}" aria-expanded="false" aria-controls="collapseExample">
-                Summary
+                <button class="btn btn-primary remove-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMV-${currentMovie.imdbID}" aria-expanded="false" aria-controls="collapseExample">
+                Remove
                 </button>
             </p>
-            <div class="collapse" id="collapseMV-${currentMovie.imdbID}" >
-                <div class="card card-body">
-                ${currentMovie.Title}
-                </div>
-            </div>
+            
             </p>
             
         </div>
@@ -46,3 +41,12 @@ function renderMovies(movies) {
 let watchlistJSON = localStorage.getItem('watchlist')
     let watchlist = JSON.parse(watchlistJSON)
     renderMovies(watchlist)
+
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-btn')) {
+            console.log('yay..')
+            const movieID = e.target.dataset.imdbid
+            localStorage.removeItem('watchlist')
+            
+        }
+    })
