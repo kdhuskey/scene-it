@@ -7,10 +7,7 @@ function renderMovies(movies) {
         .then(detailedMovies => {
             console.log(detailedMovies)
             const movieHtmlArray = detailedMovies.map(function (currentMovie) {
-
-
                 return `
-            
             <div class="movie col-4">
             <div class="card" style="width: 18rem;">
             <div>
@@ -39,18 +36,12 @@ function renderMovies(movies) {
             </div>
             </div>
             </div>
-        
             `
             })
-
-
             const results = document.querySelector('#results')
             results.innerHTML = movieHtmlArray.join('')
         })
-
-
 }
-
 const myForm = document.querySelector('#search-form')
 myForm.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -65,15 +56,11 @@ myForm.addEventListener('submit', function (e) {
             movieData = data.Search
         })
     myForm.reset()
-
 })
-
-
 const addButton = document.querySelector('.add-button')
 document.addEventListener('click', function (event) {
     if (event.target.contains(addButton)) {
         const movieID = event.target.dataset.imdbid
-
     }
 })
 function saveToWatchlist(movieID) {

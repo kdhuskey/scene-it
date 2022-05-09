@@ -1,4 +1,3 @@
-// let watchlist = JSON.parse(localStorage.getItem('watchlist'))
 let watchlistJSON = localStorage.getItem('watchlist')
 let watchlist = JSON.parse(watchlistJSON)
 console.log(watchlist)
@@ -28,21 +27,16 @@ function renderMovies(movies) {
                 </button>
             </p>
             </p>
-            
         </div>
         </div>
         </div>
     
         `
     })
-
-
     const results = document.querySelector('#results')
     results.innerHTML = movieHtmlArray.join('')
 }
-
     renderMovies(watchlist)
-
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('remove-btn')) {
             const movieID = e.target.dataset.imdbid
@@ -50,7 +44,9 @@ function renderMovies(movies) {
                 if (movieID === movie.imdbID){
                     return false
                 }
-                else return true
+                else {
+                    return true
+                }
                 
             })
             watchlistJSON = JSON.stringify(watchlist)
